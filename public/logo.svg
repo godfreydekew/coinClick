@@ -1,0 +1,19 @@
+<svg width="201" height="64" viewBox="0 0 201 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circle with gradient for the first "C" -->
+  <circle cx="32" cy="32" r="30" fill="url(#gradient)" />
+  <!-- First "C" inside the circle -->
+  <text x="32" y="42" font-family="Arial, sans-serif" font-weight="bold" font-size="28" text-anchor="middle" fill="white">
+    C
+  </text>
+  <!-- Text for the rest of "CoinClick" -->
+  <text x="63" y="42" font-family="Arial, sans-serif" font-weight="bold" font-size="28" fill="white">
+    oinClick
+  </text>
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="2" y1="32" x2="60.2886" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BD24DF"/>
+      <stop offset="1" stop-color="#2D6ADE"/>
+    </linearGradient>
+  </defs>
+</svg>
