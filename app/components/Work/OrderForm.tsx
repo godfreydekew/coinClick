@@ -8,7 +8,6 @@ interface OrderFormProps {
 }
 
 const OrderForm: React.FC<OrderFormProps> = ({ transactionType, onClose }) => {
-    // ... keeping all the state and handlers unchanged ...
     const [crypto, setCrypto] = useState('USDT');
     const [currency, setCurrency] = useState('TRY');
     const [amount, setAmount] = useState('');
@@ -18,7 +17,6 @@ const OrderForm: React.FC<OrderFormProps> = ({ transactionType, onClose }) => {
     const [unitPrice, setUnitPrice] = useState<number | null>(null);
     const [error, setError] = useState<string | null>(null);
 
-    // Keeping the existing useEffect hooks unchanged...
     useEffect(() => {
         const fetchCryptoPrice = async () => {
             if (crypto !== 'USDT') {
@@ -42,7 +40,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ transactionType, onClose }) => {
         if (!isNaN(numericAmount) && wallet && currency && crypto && unitPrice) {
             let usdAmount: number;
             if (currency === 'TRY') {
-                const exchangeRateBuy = 34.3;
+                const exchangeRateBuy = 34.35;
                 usdAmount = numericAmount / exchangeRateBuy;
             } else if (currency === 'USD') {
                 usdAmount = numericAmount;

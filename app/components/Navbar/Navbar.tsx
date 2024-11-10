@@ -1,4 +1,5 @@
 import { Disclosure } from '@headlessui/react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { Bars3Icon } from '@heroicons/react/24/outline';

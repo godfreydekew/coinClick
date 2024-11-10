@@ -3,7 +3,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState } from 'react';
-import OrderForm from './OrderForm'; // Import the OrderForm component
+import OrderForm from './OrderForm'; 
 
 interface workdata {
     imgSrc: string;
@@ -41,21 +41,25 @@ const Work = () => {
             <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative'>
                 <div className="radial-bgone hidden lg:block"></div>
             
-
-                <div className='flex align-middle justify-center mt-6'>
-                    <button
-                        onClick={() => setTransactionType('Buy')}
-                        className='text-lg font-semibold bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg mr-4'
-                    >
-                        Buy Now
-                    </button>
-                    {/* <button
-                        onClick={() => setTransactionType('Sell')}
-                        className='text-lg font-semibold bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg'
-                    >
-                        Sell Now
-                    </button> */}
-                </div>
+                {
+                    transactionType || (
+                         <div className='flex align-middle justify-center mt-6'>
+                            <button
+                                onClick={() => setTransactionType('Buy')}
+                                className='text-lg font-semibold bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg mr-4'
+                            >
+                                Buy Now
+                            </button>
+                            {/* <button
+                                onClick={() => setTransactionType('Sell')}
+                                className='text-lg font-semibold bg-white text-blue-600 py-3 px-8 rounded-full shadow-lg'
+                            >
+                                Sell Now
+                            </button> */}
+                        </div>
+                    )
+                }
+               
 
                 {/* Conditionally render the OrderForm */}
                 {transactionType && (
@@ -64,7 +68,7 @@ const Work = () => {
                         onClose={() => setTransactionType(null)}
                     />
                 )}
-
+               
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-5 mt-32'>
                     {workdata.map((items, i) => (
                         <div className='card-b p-8' key={i}>
