@@ -40,7 +40,7 @@ const OrderForm: React.FC<OrderFormProps> = ({ transactionType, onClose }) => {
         if (!isNaN(numericAmount) && wallet && currency && crypto && unitPrice) {
             let usdAmount: number;
             if (currency === 'TRY') {
-                const exchangeRateBuy = 34.35;
+                const exchangeRateBuy = 34.4
                 usdAmount = numericAmount / exchangeRateBuy;
             } else if (currency === 'USD') {
                 usdAmount = numericAmount;
